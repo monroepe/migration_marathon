@@ -1,4 +1,5 @@
 class Checkout < ActiveRecord::Base
   belongs_to :book
-  validates :customer, :book_id, presence: true
+  belongs_to :reader
+  validates :reader_id, :book_id, presence: true
 end
